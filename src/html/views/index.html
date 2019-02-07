@@ -1,0 +1,10 @@
+<% var data = {
+title: "Test page"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<%= _.template(require('./../includes/hero.html'))(data) %>
+
+<%= _.template(require('./../includes/main-content.html'))(data) %>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

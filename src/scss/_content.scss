@@ -1,0 +1,100 @@
+.hero-full-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #13161b;
+  background: linear-gradient(-225deg, #13161b, #1d2941);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+
+  .top-content-section,
+  .middle-content-section,
+  .bottom-content-section {
+    z-index: 3;
+  }
+
+  .top-content-section {
+    width: 100%;
+    min-height: $header-height;
+  }
+
+  .middle-content-section {
+    width: auto;
+    max-width: 75%;
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+    .hero-heading {
+      margin-bottom: 2.5rem;
+      font-family: 'Montserrat-Bl-I', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      font-style: italic;
+      color: $main-white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      @include media-breakpoint-down(md) {
+        font-size: 2rem;
+      }
+    }
+    .hero-subheading {
+      margin-bottom: 2.5rem;
+      font-size: 1.5rem;
+      color: $main-gold;
+      text-transform: uppercase;
+      line-height: 1.4;
+      letter-spacing: 1px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+      }
+    }
+    .hero-btns {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+      &__button {
+        display: inline-block;
+        margin-bottom: 1.25rem;
+        padding: 0.625rem $spacing-unit;
+        border: 2px solid $main-white;
+        border-radius: 2px;
+        background: transparent;
+        font-size: 1rem;
+        font-weight: 700;
+        color: $main-white;
+        text-transform: uppercase;
+        line-height: 1.1;
+        transition: $main-transition-3;
+        &:hover {
+          background: #2b85a7;
+          //background: linear-gradient(to top, #2b85a7, #4fbcdb);
+          border-color: #2b85a7;
+          color: $main-black;
+        }
+        @include media-breakpoint-up(md) {
+          &:not(:last-child) {
+            margin-right: 2.5rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  .bottom-content-section {
+    width: 100%;
+    min-height: $header-height;
+  }
+}
